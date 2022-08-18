@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOREX</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <title>FOREX</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">                                                                                                                                                                                                                                                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="Classes.css" type="text/css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -20,34 +20,23 @@
        {
           $("#newform").modal('show');
         }, 3000)       
-          $('#submitbtn').on('click', function () 
-       {
-          $('#newform').modal('hide');
-          alert("Hi");
-        });
       });
     </script>
- </head>
+</head>
 <body>
-
 <!--Form-->
   <div class="container-fluid">
-          <div class="modal fade" id="newform">
-            <div class="modal-dialog-scrollable modal-xl">
+          <div class="modal" tabindex="-1" role="dialog" id="newform">
+            <div class="modal-dialog-scrollable modal-xl" role="document" style="margin: 10px" id="newform1">
               <div class="modal-content">
-            <!-- 
-              <div class="modal-header">
-                    <h5 class="modal-title">title</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" style="color: red">&times;</span>
-                  </button>             
-                  </div>
-            -->       
-              <div class="modal-body">
+              <!--<div class="modal-header"></div> -->       
+               <div class="modal-body">
                 <div class="row">
-                  <div class="col-md-12 xm fontstyles2">
-                      <button type="button" class="close" data-dismiss="modal" style="color: red" id="closebtn">&times;</button>
-                   </div>
+                  <div class="col-md-12 xm">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true" style="color: red">&times;</span>
+                    </button>
+                    </div>
                 </div>
                 <div class="row">
                       <div class="col-md-6 xm fontstyles2">
@@ -77,7 +66,7 @@
                                 <h6><b>START YOUR OWN FOREX BROKERAGE BUSINESS</b></h6>
                                 <h6>START BROKERAGE@ 1899, ALL FOREX BROKERAGE TOOLS, MT4/5 WHITE LABEL SOLUTION, CRM, INCORPORATION, BANK ACCOUNT, INTEGRATION & MUCH MORE</h6>                
                               </div>
-                           </div> 
+                          </div> 
                       </div>
                       <div class="col-md-6 xm">
                         <div class="row">
@@ -91,8 +80,11 @@
                                     <div class="row">
                                       <div class="col-md-6 xm fontstyles2">
                                           <div class="form-group">
+
                                               <label for="ContactInput" class="formgap"><h6>Enter Contact Number</h6></label>
-                                              <input type="tel" class="form-control input-sm input-group" id="ContactInput" style="margin-top: -7px">
+                                                <input type="tel" class="form-control input-sm" id="ContactInput" style="margin-top: -7px">
+
+
                                               <label for="ModeInput" class="formgap"><h6>Mode Of Contact</h6></label>
                                               <select name="country" class="form-control form-control-lg input-sm fontstyles2" id="ModeInput" style="margin-top: -7px">
                                                 <option value="" disabled selected>Select</option>
@@ -125,8 +117,8 @@
                                     </select> 
                                     <label for="BriefInput" class="formgap"><h6>Give Me A Brief About Your Requirement</h6></label>
                                     <textarea class="form-control fontstyles2" id="BriefInput" rows="2" placeholder="Message" style="margin-top: -7px"></textarea>
-                                     <div style="margin-top: 20px">
-                                      <div class="g-recaptcha" data-sitekey="6LcGNIghAAAAAJsTSYSHjYlBIpTf43m-KwA1Fgvp"></div>
+                                     <div style="margin-top: 10px">
+                                      <div class="g-recaptcha" data-sitekey="6LcGNIghAAAAAJsTSYSHjYlBIpTf43m-KwA1Fgvp" style="height: 50%; width: 50%;"></div>
                                      </div>
                                   </div>
                                 </div>                         
@@ -136,7 +128,7 @@
                       </div>
                 </div>
               <div class="modal-footer border-0">
-                <input type="button" class="btn submitbutton" value="Submit" style="color: white; background-color:rgb(0, 231, 123);" id="submitbtn">  
+                <input type="button" class="btn submitbutton" value="Submit" data-dismiss="modal" style="color: white; background-color:rgb(0, 231, 123);" id="submitbtn">  
               </div>              
           </div>
       </div>
@@ -159,7 +151,7 @@
         </div>
          <div class="container-fluid table-responsive">
               <table class="table table-bordered text-left bg-dark table-hover table-sm">
-                <thead class="bg-light fontstyles2">
+                <thead class="bg-light fontstyles2 table-bordered ">
                     <tr>
                      <th class="text-center">EMAIL</th>
                      <th class="text-center">FIRST NAME</th>
