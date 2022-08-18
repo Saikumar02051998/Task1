@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b8f7d9d833.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
       $(document).ready(function ()
       {
@@ -19,10 +20,10 @@
        {
           $("#newform").modal('show');
         }, 3000)       
-          $('#closebtn').on('click', function () 
+          $('#submitbtn').on('click', function () 
        {
           $('#newform').modal('hide');
-          //alert("Hi");
+          alert("Hi");
         });
       });
     </script>
@@ -109,7 +110,6 @@
                                           </div>
                                       </div>
                                     </div>
-
                                     <div style="margin-top: -15px">
                                     <label for="AreYouInput"><h6>Are You A?</h6></label>
                                     <select name="AreYou" class="form-control form-control-lg input-sm fontstyles2" id="AreYouInput" style="margin-top: -7px">
@@ -125,7 +125,10 @@
                                     </select> 
                                     <label for="BriefInput" class="formgap"><h6>Give Me A Brief About Your Requirement</h6></label>
                                     <textarea class="form-control fontstyles2" id="BriefInput" rows="2" placeholder="Message" style="margin-top: -7px"></textarea>
-                                    </div>
+                                     <div style="margin-top: 20px">
+                                      <div class="g-recaptcha" data-sitekey="6LcGNIghAAAAAJsTSYSHjYlBIpTf43m-KwA1Fgvp"></div>
+                                     </div>
+                                  </div>
                                 </div>                         
                               </form>                           
                           </div>
