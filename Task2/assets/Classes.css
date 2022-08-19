@@ -1,0 +1,112 @@
+.navbaradjust
+{
+    height: 80px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.navbaralign
+{
+    background-color: orange;
+    border-radius: 25px;
+    width: 80px;
+}
+
+.demologo
+{
+    height: 50%;
+    width: 10%;
+    margin-left: 40px;
+}
+
+.cardsalign
+{
+    width: 700px;
+    margin-top: 50px;
+}
+
+.headcontent
+{
+    margin-top: 6px;
+    color: white;
+    font-size: 13px;
+    font-family: poppins;
+}
+
+.cardcontent
+{
+    color: black; 
+    font-size: 13px;
+    font-family: poppins;
+}
+
+.arrowalign
+{
+    padding-left: 0px;
+    color: white;
+}
+
+.cardcontent2
+{
+    margin-bottom: -20px; 
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.slideimg
+{
+   padding-left: 115px;
+   height: 80%;
+   width: 80%;
+   position: relative;
+   text-align: center;
+}
+.top-left1 {
+    position: absolute;
+    top: 80px;
+    left: 16px;
+    padding-left: 170px;
+    font-family: poppins;
+  }
+  .top-left2 {
+    position: absolute;
+    top: 130px;
+    left: 16px;
+    padding-left: 170px;
+    font-family: poppins;
+  }
+
+  .centered1 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: poppins;
+  }
+  .centered2 {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: poppins;
+  }
+
+.Openaccount
+{
+    position: absolute;
+    top: 80%;
+    left: 38%;
+    background-color: black;
+    box-shadow: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1,1);
+    transform: translate(-50%, -50%);  
+    transform: scale(1,1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, shadow;
+    font-family: poppins;
+}
