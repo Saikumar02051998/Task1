@@ -39,7 +39,7 @@ background-color: #000;
 
 .slideimg
 {
-   padding-left: 90px;
+   padding-left: 80px;
    height: 80%;
    width: 80%;
    position: relative;
@@ -63,7 +63,7 @@ background-color: #000;
   .centeredslidetext {
     position: absolute;
     top: 60%;
-    left: 53%;
+    left: 52%;
     transform: translate(-50%, -50%);
     font-family: poppins;
     font-size: 9px;
