@@ -1,0 +1,64 @@
+.navbrand
+{
+    font-family: poppins;
+    font-weight: bolder;
+    font-size: 30px;
+    color: white;
+    padding-left: 30px;
+}
+.navbarawidth
+{
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: purple;
+}
+.navlinkalign
+{
+    color:white;
+}
+
+.fontstyles
+{
+    text-align: left;
+    color:purple;
+    font-size: larger;
+    padding-top: 35px;
+    font-family: 'poppins';
+    
+}
+.fontstyles2
+{
+    font-family: 'poppins';
+    color:purple;
+    font-size: 13px;
+}
+.paginationalign
+{
+    background-color: purple !important; 
+    color: white !important;
+}
+.boxes
+{
+    width: 70px;
+    height: 25px;
+}
+
+.tooltip-inner {
+    color: #fff;
+    text-align: center;
+    background-color: purple;
+}
+
+.popover-inner {
+ color: purple;
+}
+
+.tablevalues
+{
+   padding-top: 10px !important;
+}
+.tblhead
+{
+    background-color: purple !important;
+    color: white !important;
+}
