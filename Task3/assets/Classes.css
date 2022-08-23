@@ -1,3 +1,11 @@
+
+/*Loader*/
+.bodyoverflow
+{
+    overflow-x:hidden !important;
+}
+
+/*Navbar*/
 .navbrand
 {
     font-family: poppins;
@@ -6,20 +14,44 @@
     color: white;
     padding-left: 30px;
 }
+.navtoggleicon
+{
+    border-radius:20px;
+}
 .navbarawidth
 {
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     background-color: purple;
+    overflow-x:30px;
 }
 .navlinkalign
 {
     color:white;
 }
+.aboutdropdown
+{
+color: white;
+}
 
+/*dropdown contents*/
+.dpcontents
+{
+    margin-top:20px;
+}
+/*sign-in*/
+.signinbtn
+{
+    background-color: white;
+    color: purple;
+    border-radius: 10px;
+    font-family: poppins;
+    max-width: 80px;
+}
+
+/*\Font Styles*/
 .fontstyles
 {
-    text-align: left;
     color:purple;
     font-size: larger;
     padding-top: 35px;
@@ -32,33 +64,158 @@
     color:purple;
     font-size: 13px;
 }
+.fontstyles3
+{
+    font-family: 'poppins';
+    color:purple;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.fontstyles4
+{
+    font-family: poppins !important;
+}
+.fontstyles5
+{
+    font-family: poppins !important;
+    color: purple;
+}
+
+/*Pagination*/
 .paginationalign
 {
     background-color: purple !important; 
     color: white !important;
 }
+.paginationpadding
+{
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+/*Entry Box*/
 .boxes
 {
     width: 70px;
     height: 25px;
 }
 
+/*Tooltip*/
 .tooltip-inner {
     color: #fff;
     text-align: center;
     background-color: purple;
 }
 
+/*Popover*/
 .popover-inner {
  color: purple;
 }
-
+/*Table Values*/
 .tablevalues
 {
    padding-top: 10px !important;
 }
+
+/*Table Head*/
 .tblhead
 {
     background-color: purple !important;
     color: white !important;
+}
+
+/*Progress Bar*/
+.pgbarwidth
+{
+    width: 350px !important;
+}
+.pgbarcolor
+{
+    background-color: purple !important;
+}
+.pgbarpadding
+{
+    margin-top: -25px;
+}
+
+/*Loader*/
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+
+  body {
+  margin: 0;
+  padding: 0;
+  width:100vw;
+  height: 100vh;
+  background-color: #eee;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100%;
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: purple;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: visible;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
 }
