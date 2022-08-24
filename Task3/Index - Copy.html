@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,45 +19,27 @@
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/b8f7d9d833.js" crossorigin="anonymous"></script>
   <script src="./assets/Scripts.js"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" type="text/css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" type="text/css" rel="stylesheet">
   <title>ConnectON</title>
 </head>
 <header id="header">
-  <!--NavBar-->
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbarawidth" id="mynavbar">
-      <a href="#" class="navbar-brand">
-        <h3 class="navbrand">ConnectON</h3>
-      </a>
-      <div class="togglebtn">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navtoggle">
-          <span class="navbar-toggler-icon bg-light navtoggleicon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse navtogggle" id="navtoggle">
-        <ul class="navbar-nav navbar-right">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle aboutdropdown" data-toggle="dropdown" href="#" role="button"
-              aria-haspopup="false" aria-expanded="false">About Us</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item fontstyles4" href="#history">Our History</a>
-              <a class="dropdown-item fontstyles4" href="#goal">Our Goal</a>
-              <a class="dropdown-item fontstyles4" href="#plans">Future Plans</a>
-              <a class="dropdown-item fontstyles4" href="#users">User Details</a>
-              <a class="dropdown-item fontstyles4" href="#progress">New Users</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link navlinkalign" href="#">Home</a>
-          </li>
-          <li class="nav-item listitems">
-            <a class="nav-link navlinkalign signinbtn text-center" href="#">Sign-In</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <div id="mySidebar" class="sidebar newsidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#history" id="ourhistory">Our History</a>
+    <a href="#goal" id="goals">Our Goal</a>
+    <a href="#plans" id="futurePlans">Future Plans</a>
+    <a href="#users" id="userdetails">User Details</a>
+    <a href="#progress" id="newusers">New Users</a>
+  </div>
+  <div id="main">
+    <button class="openbtn" onclick="openNav()"><i class="fa fa-home" aria-hidden="true"></i><b> Home</b></button>
   </div>
 </header>
-
 <body class="bodyfont">
   <!--Loader-->
 
@@ -118,8 +99,8 @@
       User Details
     </div>
   </div>
-  <div class="container table-responsive-sm" id="users">
-    <table class="table text-right table-hover table-sm">
+  <div class="container" id="mytable">
+    <table class="table text-right table-hover table-sm table-responsive-sm" id="usertable">
       <thead class="fontstyles2 tblhead">
         <tr class="text-center">
           <th>NAME</th>
@@ -152,7 +133,6 @@
             </div>
           </td>
         </tr>
-
         <tr>
           <td class="tablevalues">Saranya</td>
           <td class="tablevalues"><a class="popover-inner tablevalues" data-toggle="popover"
@@ -161,7 +141,7 @@
           <td class="tablevalues">Active</td>
           <td>
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-              <button type="button" class="btn btn-sm tooltip-inner text-center" data-toggle="tooltip"
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
                 data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
               <div class="btn-group" role="group">
                 <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
@@ -183,7 +163,7 @@
           <td class="tablevalues">Active</td>
           <td>
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-              <button type="button" class="btn btn-sm tooltip-inner text-center" data-toggle="tooltip"
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
                 data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
               <div class="btn-group" role="group">
                 <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
@@ -205,7 +185,7 @@
           <td class="tablevalues">Active</td>
           <td>
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-              <button type="button" class="btn btn-sm tooltip-inner text-center" data-toggle="tooltip"
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
                 data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
               <div class="btn-group" role="group">
                 <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
@@ -227,7 +207,7 @@
           <td class="tablevalues">Active</td>
           <td>
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-              <button type="button" class="btn btn-sm tooltip-inner text-center" data-toggle="tooltip"
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
                 data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
               <div class="btn-group" role="group">
                 <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
@@ -249,7 +229,161 @@
           <td class="tablevalues">Active</td>
           <td>
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-              <button type="button" class="btn btn-sm tooltip-inner text-center" data-toggle="tooltip"
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
+                data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tablevalues">Kumar</td>
+          <td class="tablevalues"><a class="popover-inner tablevalues" data-toggle="popover"
+              data-content="Verified Email ID" tabindex="0" data-trigger="focus">kumar2@gmail.com</a></td>
+          <td class="tablevalues">+9199887766</td>
+          <td class="tablevalues">Active</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
+                data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tablevalues">Vishnu</td>
+          <td class="tablevalues"><a class="popover-inner tablevalues" data-toggle="popover"
+              data-content="Verified Email ID" tabindex="0" data-trigger="focus">vishnu2@gmail.com</a></td>
+          <td class="tablevalues">+9191234564</td>
+          <td class="tablevalues">Inactive</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
+                data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tablevalues">Akash</td>
+          <td class="tablevalues"><a class="popover-inner tablevalues" data-toggle="popover"
+              data-content="Verified Email ID" tabindex="0" data-trigger="focus">akash19982@gmail.com</a></td>
+          <td class="tablevalues">+91975869273</td>
+          <td class="tablevalues">Inactive</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
+                data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tablevalues">Mahesh</td>
+          <td class="tablevalues"><a class="popover-inner tablevalues" data-toggle="popover"
+              data-content="Verified Email ID" tabindex="0" data-trigger="focus">mahesg44412@gmail.com</a></td>
+          <td class="tablevalues">+9197629999</td>
+          <td class="tablevalues">Active</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
+                data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tablevalues">Gokul</td>
+          <td class="tablevalues"><a class="popover-inner tablevalues" data-toggle="popover"
+              data-content="Verified Email ID" tabindex="0" data-trigger="focus">goku12@gmail.com</a></td>
+          <td class="tablevalues">+919449999</td>
+          <td class="tablevalues">Active</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
+                data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tablevalues">Kamal</td>
+          <td class="tablevalues"><a class="popover-inner tablevalues" data-toggle="popover"
+              data-content="Verified Email ID" tabindex="0" data-trigger="focus">kamal12@gmail.com</a></td>
+          <td class="tablevalues">+9199859999</td>
+          <td class="tablevalues">Inactive</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
+                data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <a class="dropdown-item" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tablevalues">Sathya</td>
+          <td class="tablevalues"><a class="popover-inner tablevalues" data-toggle="popover"
+              data-content="Verified Email ID" tabindex="0" data-trigger="focus">sathyamail@gmail.com</a></td>
+          <td class="tablevalues">+919829999</td>
+          <td class="tablevalues">Active</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <button type="button" class="btn btn-sm tooltip-inner text-center purplebg" data-toggle="tooltip"
                 data-placement="bottom" title="Click here to Edit or Delete this entry">ACTION</button>
               <div class="btn-group" role="group">
                 <button id="btnGroupDrop" type="button" class="btn dropdown-toggle btn-sm purplebg"
@@ -265,14 +399,18 @@
         </tr>
       </tbody>
     </table>
-    <div class="paginationpadding" id="paginations">
+    <!--
+<div class="paginationpadding" id="paginations">
       <ul class="pagination pagination-sm justify-content-center">
-        <li class="page-item"><a class="page-link paginationalign" href="#">Previous</a></li>
-        <li class="page-item active"><a class="page-link paginationalign" href="#">1</a></li>
-        <li class="page-item"><a class="page-link paginationalign" href="#">2</a></li>
-        <li class="page-item"><a class="page-link paginationalign" href="#">Next</a></li>
+        <li class="page-item"><a class="page-link paginationalign" href="#"><i
+              class="fa fa-long-arrow-left fa-1x"></i></a></li>
+        <li class="page-item active"><a class="page-link paginationalign" href="#"><b>i</b></a></li>
+        <li class="page-item"><a class="page-link paginationalign" href="#"><b>ii</b></a></li>
+        <li class="page-item"><a class="page-link paginationalign" href="#"><i
+              class="fa fa-long-arrow-right fa-1x"></i></a></li>
       </ul>
     </div>
+    -->
   </div>
   <div class="container-fluid" id="progressbar">
     <div class="fontstyles3" id="progress">
@@ -281,7 +419,7 @@
   </div>
   <div class="container" id="months">
     <div class="row pgbarbottom">
-      <div class="col">
+      <div class="col-md-6">
         <label class="fontstyles pgbarpadding">
           <h6>January</h6>
         </label>
@@ -319,7 +457,7 @@
           <div class="progress-bar pgbarcolor progressjun">60%</div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-md-6">
         <label class="fontstyles pgbarpadding">
           <h6>July</h6>
         </label>
@@ -363,4 +501,5 @@
   </div>
   </div>
 </body>
+
 </html>
