@@ -411,4 +411,7 @@ padding-top: 20px;
   border-radius: 3px;
   transition: all 0.3s ease 0s;
 }
-
+.pagination .text-item :active
+{
+  background-color: #ff66a3;
+}
