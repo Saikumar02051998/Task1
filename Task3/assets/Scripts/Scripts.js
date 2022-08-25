@@ -13,13 +13,13 @@ $(document).ready(function () {
     setTimeout(function () {
         var container = $("#myloader");
         container.hide();
-    }, 2000)
+    }, 3000)
 });
 //hide containers when loader loading
 $(window).on("load", function (e) {
     var div1 = $("#header");
     var div2 = $("#contents");
-    var div3 = $("#userdetails");
+    var div3 = $("#pagefooter");
     var div4 = $("#users");
     var div5 = $("#progressbar");
     var div6 = $("#months");
@@ -42,7 +42,7 @@ $(window).on("load", function (e) {
         div6.show();
         div7.show();
         div8.show();
-    }, 2000)
+    }, 3000)
 })
 
 

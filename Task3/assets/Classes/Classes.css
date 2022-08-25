@@ -8,21 +8,44 @@
     background-size: cover;
 }
 /*logo*/
+.demologoinsidesidebar
+{
+   clip-path:circle();
+   margin-top: 20px;
+   margin-left: 30px;
+   margin-bottom: 10px;
+   height: 65px;
+   width: 87px;
+}
 .demologo
 {
    clip-path:circle();
-   margin-top: 15px;
-   margin-left: 100px;
-   height: 180px;
+   margin-top: 0px;
+   margin-left: 140px;
+   height: 105px;
+   width: 137px;
+}
+.historylogo
+{
+  height: 250px;
    width: 250px;
 }
-.demoname
+.Goallogo
 {
-   margin-top: 20px;
-   margin-left: 165px;
-   font-weight: bold;
-   font-size: 20px;
-   margin-bottom: -40px;
+  height: 350px;
+  width:  350px;
+  margin-top: -80px;
+  margin-bottom: -60px;
+  padding-left: 80px;
+}
+.welcomemessage
+{
+padding-top: 20px;
+}
+.logotext
+{
+  padding-left: 160px;
+  color: black;
 }
 /*body*/
 .bodyfont
@@ -31,10 +54,34 @@
     overflow-x: hidden !important;
     background-color: white;
 }
-
+/*background color for text contents*/
+.txtbg
+{
+  background: url("../Images/Bg.jpeg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+/*hover of content boxes*/
+.txtbg:hover
+{
+    box-shadow: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, shadow;
+}
 /*backround of table dropdown*/
 .purplebg
-{background-color: orange !important;}
+{background-color: lightblue !important;}
 
 /*dropdown contents*/
 .dpcontents
@@ -54,7 +101,7 @@
 /*\Font Styles*/
 .fontstyles
 {
-    color:#4285F4;
+    color:white;
     font-size: larger;
     padding-top: 35px;
     font-family: 'poppins';
@@ -93,7 +140,7 @@
 .tooltip-inner {
     color: black !important;
     text-align: center !important;
-    background-color:orange !important;
+    background-color:lightblue !important;
 }
 
 /*Popover*/
@@ -103,7 +150,7 @@
 /*Table Values*/
 .tablevalues
 {
-   padding-top: 10px !important;
+   padding-top: 20px !important;
 }
 
 /*Table Head*/
@@ -112,11 +159,26 @@
     background-color: #4285F4 !important;
     color: white !important;
 }
-
+.tblbottom
+{
+  margin-bottom: 40px !important;
+}
+.tblbg
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../Images/Bg.jpeg") !important;
+}
 /*Progress Bar*/
+.progressbarbg
+{
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
 .pgbarwidth
 {
-    width: 350px !important;
+    width: 283px !important;
 }
 .pgbarcolor
 {
@@ -187,7 +249,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #4285F4;
+  background: url("../Images/Bg.jpeg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -234,12 +300,11 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color:#4285F4;
+    background-color: #ff66a3;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
   }
-  
   /* The sidebar links */
   .newsidebar a {
     padding: 8px 8px 8px 32px;
@@ -252,32 +317,45 @@
   
   /* vavigation links hover*/
   .newsidebar a:hover {
-    color: #f1f1f1;
+    padding-right: -20px;
+    border-radius: 40px;
+    text-decoration: none;
+    background-position: 5px;
   }
-  
+  /*hover of sidebar links*/
+  #ourhistory:hover {background-color: white; color:#ff66a3; text-decoration: none;}
+  #goals:hover {background-color: white; color:#ff66a3; text-decoration: none;}
+  #userdetails:hover {background-color: white; color:#ff66a3; text-decoration: none;}
+  #newusers:hover {background-color: white; color:#ff66a3; text-decoration: none;}
   /*sidebar close*/
   .newsidebar .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 5px;
     font-size: 36px;
-    margin-left: 50px;
+    margin-left: 10px;
   }
-  
+  /*close button align*/
+  .closebtnalign
+  {
+    padding-right: 20px;
+    width: 10%;
+    height: 10%;
+  }
   /*sidebar open button*/
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #4285F4;
+    background-color:   #ff66a3;
     color: white;
     padding: 10px 15px;
     border: none;
-    border-radius: 30px;
+    border-radius: 25px;
   }
   
   .openbtn:hover {
     background-color: white;
-    color:#4285F4;
+    color:#ff66a3;
   }
   
   #main {
@@ -290,3 +368,47 @@
     .newsidebar {padding-top: 15px;}
     .newsidebar a {font-size: 18px;}
   }
+  /*footer icons*/
+  .footericons
+  {
+    color: white;
+    clip-path: circle();
+  }
+  .footericonsalign
+  {
+    padding-left: 30px;
+  }
+ /*footer logo*/
+  .footerlogo
+{
+   clip-path:circle();
+   margin-top: 1px;
+   margin-left: 30px;
+   margin-bottom: 10px;
+   height: 85px;
+   width: 117px;
+}
+/*footer alignment*/
+.footeralign
+{
+  padding-top: 40px !important;
+  padding-bottom: 20px;
+}
+/*remove underline from texts*/
+.txtdecoreation
+{
+  text-decoration: none !important;
+  color: white;
+}
+/*pagination modifications*/
+.pagination li a {
+  color: black;
+  background-color: white;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 2px;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.3s ease 0s;
+}
+
